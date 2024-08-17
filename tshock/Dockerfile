@@ -43,6 +43,7 @@ EXPOSE 7777 7878
 ENV CONFIGPATH=/root/.local/share/Terraria/Worlds
 ENV LOGPATH=/tshock/logs
 ENV WORLD_FILENAME=""
+ENV AUTOCREATE=""
 
 # Allow for external data
 VOLUME ["/root/.local/share/Terraria/Worlds", "/tshock/logs", "/tshock/ServerPlugins", "/config"]
