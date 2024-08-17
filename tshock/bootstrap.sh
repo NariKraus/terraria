@@ -23,12 +23,10 @@ fi
 WORLD_PATH="/root/.local/share/Terraria/Worlds/$WORLD_FILENAME"
 
 autocreate_flag=false
-for arg in "$@"; do
-    if [ "$arg" = "-autocreate" ]; then
-        autocreate_flag=true
-        break
-    fi
-done
+if [ -z "$WORLD_FILENAME" ]; then
+    autocreate_flag=true
+    break
+fi
 
 
 if [ -z "$WORLD_FILENAME" ]; then
